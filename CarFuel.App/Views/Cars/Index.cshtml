@@ -1,0 +1,8 @@
+﻿@using CarFuel.Models
+@model IEnumerable<Car> 
+
+<h2>My Cars</h2>
+
+@foreach(var c in Model) {
+  <h2>@c.Name</h2>
+}

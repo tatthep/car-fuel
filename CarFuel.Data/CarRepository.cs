@@ -1,0 +1,15 @@
+﻿using CarFuel.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace CarFuel.Data {
+  public class CarRepository {
+
+    private CarFuelDb db = new CarFuelDb();
+
+    public IQueryable<Car> Query(Func<Car, bool> condition) {
+      return db.Cars.Where(condition).AsQueryable();
+    }
+  }
+}
