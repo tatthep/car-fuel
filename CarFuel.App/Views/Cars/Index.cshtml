@@ -1,0 +1,22 @@
+﻿@using CarFuel.Models
+@model IEnumerable<Car>
+
+<h2>My Cars</h2>
+
+
+<div class="row">
+  @foreach (var c in Model) {
+    <div class="col-xs-3">
+      <img src="~/Images/car.png"
+           class="img-thumbnail img-responsive" />
+      <div class="text-center">
+        <b>@c.Name</b>
+      </div>
+    </div>
+  }
+  <div class="col-xs-3">
+    <a href="~/Cars/Add" class="btn btn-success btn-lg">
+      <span class="glyphicon glyphicon-plus"></span>
+    </a>
+  </div>
+</div>
