@@ -1,6 +1,7 @@
 ﻿using CarFuel.Data;
 using CarFuel.Models;
 using System;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace CarFuel.Services {
@@ -9,7 +10,16 @@ namespace CarFuel.Services {
     private CarRepository carRepo = new CarRepository();
 
     public IEnumerable<Car> GetAll() {
-      return carRepo.Query((Car c) => true);
+      return carRepo.Query((Car c) => true); 
+    }
+
+    public IEnumerable<Car> Get(Func<Car, bool> condition) {
+      return carRepo.Query(condition);
+    }
+
+    public Car Find(params object[] keys) {
+      Guid id = (Guid)keys[0];
+      return carRepo.Query(c => c.Id == id).SingleOrDefault();
     }
   }
 }
