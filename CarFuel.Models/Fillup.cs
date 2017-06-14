@@ -13,7 +13,8 @@ namespace CarFuel.Models
         public double Liters { get; set; }
         public bool IsFull { get; set; }
 
-        public double GetKML {
+        public double? KilometersPerLiter
+        {
             get {
                 return 0;
             }
