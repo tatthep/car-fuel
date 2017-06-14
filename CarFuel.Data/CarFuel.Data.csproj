@@ -49,6 +49,15 @@
   <ItemGroup>
     <Compile Include="CarFuelDb.cs" />
     <Compile Include="CarRepository.cs" />
+    <Compile Include="Migrations\201706130914217_InitialCreate.cs" />
+    <Compile Include="Migrations\201706130914217_InitialCreate.Designer.cs">
+      <DependentUpon>201706130914217_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706140416415_Update Car.cs" />
+    <Compile Include="Migrations\201706140416415_Update Car.Designer.cs">
+      <DependentUpon>201706140416415_Update Car.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,6 +69,14 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201706130914217_InitialCreate.resx">
+      <DependentUpon>201706130914217_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706140416415_Update Car.resx">
+      <DependentUpon>201706140416415_Update Car.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

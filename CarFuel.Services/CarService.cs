@@ -10,7 +10,7 @@ namespace CarFuel.Services {
     private CarRepository carRepo = new CarRepository();
 
     public IEnumerable<Car> GetAll() {
-      return carRepo.Query((Car c) => true); 
+      return carRepo.Query(c => true); 
     }
 
     public IEnumerable<Car> Get(Func<Car, bool> condition) {
