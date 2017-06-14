@@ -21,5 +21,13 @@ namespace CarFuel.Services {
       Guid id = (Guid)keys[0];
       return carRepo.Query(c => c.Id == id).SingleOrDefault();
     }
+
+    public void Add(Car item) {
+      carRepo.Add(item);
+    }
+
+    public void SaveChanges() {
+      carRepo.SaveChanges();
+    }
   }
 }

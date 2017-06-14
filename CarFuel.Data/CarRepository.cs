@@ -11,5 +11,13 @@ namespace CarFuel.Data {
     public IQueryable<Car> Query(Func<Car, bool> condition) {
       return db.Cars.Where(condition).AsQueryable();
     }
+
+    public void Add(Car item) {
+      db.Cars.Add(item);
+    }
+
+    public void SaveChanges() {
+      db.SaveChanges();
+    }
   }
 }
