@@ -20,6 +20,6 @@ namespace CarFuel.Models
             }
         }
 
-        public virtual Car car { get; set; }
+        public virtual Car Car { get; set; }
     }
 }
