@@ -13,18 +13,17 @@ namespace CarFuel.Models {
 
         public double? KilometersPerLiter {
             get {
-                if (NexFillUp == null) {
+                if (NextFillUp == null) {
                     return null;
                 }
                 else {
-                    return (this.NexFillUp.Odometer - this.Odometer) / NexFillUp.Liters;
+                    return (this.NextFillUp.Odometer - this.Odometer) / NextFillUp.Liters;
                 }
-
             }
         }
 
         public virtual Car Car { get; set; }
 
-        public FillUp NexFillUp { get; set; }
+        public virtual FillUp NextFillUp { get; set; }
     }
 }

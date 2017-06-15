@@ -6,10 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarFuel.Models
-{
-    public class Car
-    {
+namespace CarFuel.Models {
+    public class Car {
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
@@ -43,10 +41,13 @@ namespace CarFuel.Models
 
         public virtual ICollection<FillUp> FillUps { get; set; }
 
-        public Car()
-        {
+        public Car() {
             FillUps = new HashSet<FillUp>();
         }
 
+        public double? AverageKML() {
+            return null;
+
+        }
     }
 }
